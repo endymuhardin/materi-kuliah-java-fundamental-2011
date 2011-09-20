@@ -1,0 +1,8 @@
+Daftar Studi Kasus
+
+- Aplikasi PR SD : generate soal matematika SD
+  Input :
+  - jenis operator (tambah kurang kali bagi)
+  - jumlah soal yang digenerate
+  - nilai maksimum dan minimum operand
+

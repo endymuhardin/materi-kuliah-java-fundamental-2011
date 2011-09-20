@@ -1,0 +1,18 @@
+Latihan Praktikum
+
+1. Setting Classpath
+   - set environment variable
+   - menggunakan opsi -cp
+
+2. Compile
+   javac
+   javac -d ../bin Halo.java sesi1/LatihanPackage.java
+
+3. Run
+   java Halo
+   java -cp ../bin Halo
+   java -cp ../bin sesi1.LatihanPackage
+
+4. Javadoc
+   javadoc -d ../docs Halo.java sesi1/LatihanPackage.java
+

@@ -119,11 +119,12 @@ Paralel Development
     - buat repository baru
       New Repository
       Nama Repository : latihan-git
-    - Copy Repository URL (HTTP)
+      Klik Create
+    - Copy Repository URL (klik dulu button HTTP)
 
 21. Daftarkan url repository github di repository local
     Tortoise > Setting > Remote
-    Name : Github
+    Remote : Github
     URL : Paste URL yang sudah dicopy di langkah sebelumnya
     Klik OK
 
@@ -133,4 +134,5 @@ Paralel Development
     Remote Branch : dikosongkan
     Remote URL : pilih Github dari Dropdown
     Klik Push
+    Refresh website github
 

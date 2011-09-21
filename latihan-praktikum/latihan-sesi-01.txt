@@ -114,3 +114,23 @@ Paralel Development
     - hapus conflict marker
     - Resolve kemudian commit
 
+20. Registrasi di github
+    - buat username
+    - buat repository baru
+      New Repository
+      Nama Repository : latihan-git
+    - Copy Repository URL (HTTP)
+
+21. Daftarkan url repository github di repository local
+    Tortoise > Setting > Remote
+    Name : Github
+    URL : Paste URL yang sudah dicopy di langkah sebelumnya
+    Klik OK
+
+22. Upload repo local ke Github
+    Klik Kanan > Git Sync
+    Local Branch : Master
+    Remote Branch : dikosongkan
+    Remote URL : pilih Github dari Dropdown
+    Klik Push
+

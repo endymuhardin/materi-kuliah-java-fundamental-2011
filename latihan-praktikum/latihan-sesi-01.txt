@@ -67,3 +67,50 @@ http://endy.artivisi.com/blog/aplikasi/instalasi-git-di-windows
     - Klik Ok
     - Buka lagi filenya, seharusnya isinya kembali ke versi terbaru
 
+Paralel Development
+
+11. Buat branch bugfix
+    Tortoise > Create Branch
+    Nama Branch : bugfix
+    Based on : HEAD (master)
+
+12. Melihat branch yang sedang aktif
+    Klik kanan, lihat (jangan klik) Commit -> master
+    master adalah branch aktif
+
+13. Pindah ke branch bugfix
+    - Tortoise > Switch/Checkout
+    - Branch : pilih bugfix
+    - Cek branch yang sedang aktif seperti langkah 12
+      Harusnya tulisannya Commit -> bugfix
+
+14. Tambah beberapa baris baru ke branch master
+15. Edit baris yang sudah ada di branch bugfix
+16. Show log untuk melihat posisi branch
+    Centang All Branches
+
+17. Merge bugfix (branch asal = bugfix)
+    ke dalam master (branch tujuan = master)
+    - pindah ke branch tujuan
+    - Tortoise > Merge
+    - Pilih branch asal (From Branch diganti jadi bugfix)
+    - Klik ok
+    - Lihat pesannya : successful atau conflict
+    - Klik close (jangan abort)
+
+18. Successful terjadi bila dua file yang digabung
+    diedit di baris yang berbeda
+
+19. Conflict terjadi bila file diedit di tempat yang sama
+    Conflict marker
+    <<<<<<< versi A
+    isi file di versi A
+    ======
+    isi file di versi B
+    >>>>>>> versi B
+
+    Resolve conflict
+    - edit baris yang conflict sesuai keinginan
+    - hapus conflict marker
+    - Resolve kemudian commit
+

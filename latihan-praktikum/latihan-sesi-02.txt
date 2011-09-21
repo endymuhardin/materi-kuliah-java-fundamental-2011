@@ -1,18 +1,33 @@
 Latihan Praktikum
 
-1. Setting Classpath
+1. Instalasi Java
+   Install jdk
+
+2. Setting Path
+   - Klik Kanan My Computer > Properties
+     > Advanced > Environment Variable
+
+   - Klik PATH di panel bawah
+   - Edit valuenya, tambahkan path <jdk>/bin
+     Contoh :
+     ;C:\Program Files\Java\jdk\bin
+
+   - Test instalasi, buka Command Prompt
+     Ketik javac <Enter>
+
+3. Setting Classpath
    - set environment variable
    - menggunakan opsi -cp
 
-2. Compile
+4. Compile
    javac
    javac -d ../bin Halo.java sesi1/LatihanPackage.java
 
-3. Run
+5. Run
    java Halo
    java -cp ../bin Halo
    java -cp ../bin sesi1.LatihanPackage
 
-4. Javadoc
+6. Javadoc
    javadoc -d ../docs Halo.java sesi1/LatihanPackage.java
 

@@ -1,0 +1,36 @@
+Latihan Praktikum 1
+
+1. Instalasi Git
+http://endy.artivisi.com/blog/aplikasi/instalasi-git-di-windows
+http://172.20.22.27/sharing
+2. Instalasi TortoiseGit
+
+3. Membuat repository local
+   - Buat folder kosong, namanya kuliah-pemrograman-1
+   - Klik kanan di folder kosong, Create Repository here
+     Opsi bare *jangan* dipilih
+   - Akan terbentuk folder .git
+
+4. Setting username dan email
+   Klik kanan > Tortoise > Settings
+   Isi username dan email
+
+5. Menambah file ke repository
+   - buat file text dengan notepad
+   - isi beberapa baris
+   - Klik kanan file, Commit -> master
+   - Isi keterangan, misalnya : versi pertama
+   - Centang file
+   - Klik OK
+
+6. Mengedit file dan menyimpan perubahan ke repository
+   - edit file yang telah dibuat pada langkah sebelumnya
+   - Klik kanan file, Commit -> master
+   - Isi keterangan, misalnya : tambahan baris kedua
+   - Centang file
+   - Klik OK
+
+7. Melihat history perubahan
+   - Klik kanan di dalam folder
+   - Show history
+

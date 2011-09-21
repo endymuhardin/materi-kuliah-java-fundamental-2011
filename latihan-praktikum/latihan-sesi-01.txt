@@ -1,18 +1,28 @@
 Latihan Praktikum 1
 
-1. Instalasi Git
+http://172.20.22.26/praktikum/
 http://endy.artivisi.com/blog/aplikasi/instalasi-git-di-windows
-http://172.20.22.27/sharing
+
+1. Instalasi Git
+   Screen Select Component
+   - Windows Explorer integration
+     Pilih Context menu entries
+
 2. Instalasi TortoiseGit
+   Setelah instalasi TortoiseGit, restart komputer
 
 3. Membuat repository local
-   - Buat folder kosong, namanya kuliah-pemrograman-1
+   - Buat folder kosong di flashdisk
+     nama folder : kuliah-pemrograman-1
    - Klik kanan di folder kosong, Create Repository here
      Opsi bare *jangan* dipilih
-   - Akan terbentuk folder .git
+   - Akan terbentuk folder .git dalam folder kuliah-pemrograman-1
+     Kalau tidak terlihat, edit setting Window Explorer
+     View > Folder Options > Show hidden files
 
 4. Setting username dan email
    Klik kanan > Tortoise > Settings
+   Klik Config
    Isi username dan email
 
 5. Menambah file ke repository
@@ -22,15 +32,38 @@ http://172.20.22.27/sharing
    - Isi keterangan, misalnya : versi pertama
    - Centang file
    - Klik OK
+   - Pesan sukses
+   - Klik Close
 
 6. Mengedit file dan menyimpan perubahan ke repository
    - edit file yang telah dibuat pada langkah sebelumnya
    - Klik kanan file, Commit -> master
    - Isi keterangan, misalnya : tambahan baris kedua
    - Centang file
-   - Klik OK
+   - Klik Ok
+   - Pesan sukses
+   - Klik Close
 
-7. Melihat history perubahan
+7. Ulangi langkah ke-6 beberapa kali
+
+8. Melihat history perubahan
    - Klik kanan di dalam folder
-   - Show history
+   - TortoiseGit > Show log
+   - Semua perubahan yang dilakukan pada langkah 6 dan 7 akan tampil
+
+9. Kembali ke masa lalu
+   - Klik kanan di dalam folder
+   - TortoiseGit > Show log
+   - Pilih commit yang terdahulu (misal: commit no 2 dari bawah)
+   - Klik kanan > Switch/Checkout to this
+   - Option jangan ada yang dicentang
+   - Ok
+   - Buka lagi filenya, seharusnya isinya kembali ke versi tersebut
+
+10. Kembali ke masa kini
+    - klik kanan di dalam folder
+    - Tortoise > Switch/Checkout
+    - Ganti no branch menjadi master
+    - Klik Ok
+    - Buka lagi filenya, seharusnya isinya kembali ke versi terbaru
 

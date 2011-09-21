@@ -15,12 +15,14 @@ Latihan Praktikum
    - Test instalasi, buka Command Prompt
      Ketik javac <Enter>
 
-3. Setting Classpath
-   - set environment variable
-   - menggunakan opsi -cp
+3. Hello World
+   - Ketik kode program Halo.java
+   https://github.com/endymuhardin/materi-kuliah-java-fundamental-2011
+   dalam folder
+   sample-code/sesi-01/batch-01/src
 
 4. Compile
-   javac
+   javac Halo.java
    javac -d ../bin Halo.java sesi1/LatihanPackage.java
 
 5. Run
@@ -28,6 +30,10 @@ Latihan Praktikum
    java -cp ../bin Halo
    java -cp ../bin sesi1.LatihanPackage
 
-6. Javadoc
+6. Setting Classpath
+   - set environment variable
+   - menggunakan opsi -cp
+
+7. Javadoc
    javadoc -d ../docs Halo.java sesi1/LatihanPackage.java
 

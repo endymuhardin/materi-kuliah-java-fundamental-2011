@@ -32,7 +32,16 @@ Latihan Praktikum
 
 6. Setting Classpath
    - set environment variable
+     set CLASSPATH=C:\hasil-compile;d:\latihan (Windows)
+     export CLASSPATH=/home/endy/tmp:/opt/latihan (Linux)
+
    - menggunakan opsi -cp
+     Windows :
+     java -cp C:\hasil-compile;d:\latihan sesi1.LatihanPackage
+
+     Linux
+     java -cp /home/endy/tmp:/opt/latihan sesi1.LatihanPackage
+
 
 7. Javadoc
    javadoc -d ../docs Halo.java sesi1/LatihanPackage.java

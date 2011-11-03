@@ -1,0 +1,35 @@
+Aplikasi Perpustakaan : 
+
+Class : 
+- Buku
+  - pengarang
+  - judul
+  - tahun
+  - penerbit
+  - jenis
+
+- Anggota
+  - no
+  - nama
+  - alamat
+  - email
+  - telp
+
+- Petugas
+  - nama
+  
+- Peminjaman
+  - tanggalPinjam
+  - tanggalHarusKembali
+  - anggota
+  - petugas
+  
+- Pengembalian
+  - peminjaman
+  - tanggalKembali
+  - denda  
+  
+  
+
+
+

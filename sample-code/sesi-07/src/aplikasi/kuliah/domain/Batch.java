@@ -34,6 +34,10 @@ public class Batch {
         this.mataKuliah = mk;
     }
     
+    public MataKuliah getMataKuliah(){
+        return this.mataKuliah;
+    }
+    
     public void setStatus(String status) {
         this.status = status;
     }

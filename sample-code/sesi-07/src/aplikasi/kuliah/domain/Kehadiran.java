@@ -13,4 +13,8 @@ public class Kehadiran {
     public void setStatus(String st){
         status = st;
     }
+    
+    public String getStatus(){
+        return status;
+    }
 }

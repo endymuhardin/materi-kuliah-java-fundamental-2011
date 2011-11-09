@@ -12,8 +12,14 @@ public class Pertemuan {
     private Dosen dosen;
     private Batch batch;
     
-    public Integer jumlahHadir(){
-        return 0;
+    public Integer hitungJumlahHadir(){
+        Integer hasil = 0;
+        for(Kehadiran k : daftarKehadiran){
+            if("Hadir".equalsIgnoreCase(k.getStatus())){
+                hasil++;
+            }
+        }
+        return hasil;
     }
     
     public Integer jumlahSakit(){
@@ -26,5 +32,17 @@ public class Pertemuan {
  
     public void setBatch(Batch b){
         this.batch = b;
+    }
+    
+    public Batch getBatch(){
+        return batch;
+    }
+    
+    public String getTanggal(){
+        return tanggal;
+    }
+    
+    public void setTanggal(String t){
+        this.tanggal = t;
     }
 }

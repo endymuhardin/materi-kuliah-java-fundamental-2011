@@ -1,5 +1,8 @@
 package aplikasi.kuliah.demo;
 
+import java.util.List;
+import java.util.ArrayList;
+
 import aplikasi.kuliah.domain.Mahasiswa;
 import aplikasi.kuliah.domain.MataKuliah;
 import aplikasi.kuliah.domain.Batch;
@@ -40,6 +43,18 @@ public class Main {
         Pertemuan p3 = new Pertemuan();
         Pertemuan p4 = new Pertemuan();
         
+        List<Pertemuan> daftarPertemuan 
+          = new ArrayList<Pertemuan>();
+        daftarPertemuan.add(p1);
+        daftarPertemuan.add(p2);
+        daftarPertemuan.add(p3);
+        daftarPertemuan.add(p4);
+        
+        p1.setTanggal("1 Nov 2011");
+        p2.setTanggal("2 Nov 2011");
+        p3.setTanggal("3 Nov 2011");
+        p4.setTanggal("4 Nov 2011");
+        
         p1.setBatch(batchPemrograman1);
         p2.setBatch(batchPemrograman1);
         p3.setBatch(batchPemrograman1);
@@ -61,8 +76,8 @@ public class Main {
         p1k1.setStatus("Hadir");
         p1k2.setStatus("Hadir");
         p1k3.setStatus("Hadir");
-        p1k4.setStatus("Ijin");
-        p1k5.setStatus("Sakit");
+        p1k4.setStatus("Hadir");
+        p1k5.setStatus("Hadir");
         
         p1.getDaftarKehadiran().add(p1k1);
         p1.getDaftarKehadiran().add(p1k2);
@@ -110,7 +125,7 @@ public class Main {
         
         p3k1.setStatus("Ijin");
         p3k2.setStatus("Sakit");
-        p3k3.setStatus("Hadir");
+        p3k3.setStatus("Ijin");
         p3k4.setStatus("Hadir");
         p3k5.setStatus("Hadir");
         
@@ -134,17 +149,27 @@ public class Main {
         p4k5.setMahasiswa(m5);
         
         p4k1.setStatus("Hadir");
-        p4k2.setStatus("Hadir");
+        p4k2.setStatus("Sakit");
         p4k3.setStatus("Sakit");
         p4k4.setStatus("Ijin");
-        p4k5.setStatus("Hadir");
+        p4k5.setStatus("Ijin");
         
         p4.getDaftarKehadiran().add(p4k1);
         p4.getDaftarKehadiran().add(p4k2);
         p4.getDaftarKehadiran().add(p4k3);
         p4.getDaftarKehadiran().add(p4k4);
         p4.getDaftarKehadiran().add(p4k5);
+        
+        // tampilkan jumlah hadir masing-masing pertemuan
+        
+        for(Pertemuan x : daftarPertemuan){
+            System.out.print("Mata kuliah "+x.getBatch().getMataKuliah().getNama());
+            System.out.print(", tanggal "+x.getTanggal());
+            System.out.print(", hadir "+x.hitungJumlahHadir());
+            System.out.println(" orang");
+        }
     }    
+    
 }
 
 

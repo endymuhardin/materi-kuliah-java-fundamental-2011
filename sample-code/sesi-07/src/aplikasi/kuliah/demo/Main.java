@@ -18,9 +18,9 @@ public class Main {
         m5.setNama("Mahasiswa 5");
         
         MataKuliah prog1 = new MataKuliah();
-        MataKuliah prog2 = new MataKuliah();
+        MataKuliah bd1 = new MataKuliah();
         
         prog1.setNama("Pemrograman 1");
-        prog2.setNama("Pemrograman 2");
+        bd1.setNama("Basis Data 1");
     }
 }

@@ -29,4 +29,16 @@ public class Batch {
     public Double ratarataKehadiran(){
         return 0d;
     }
+    
+    public void setMataKuliah(MataKuliah mk) {
+        this.mataKuliah = mk;
+    }
+    
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    
+    public List<Mahasiswa> getDaftarMahasiswa() {
+        return daftarMahasiswa;
+    }
 }

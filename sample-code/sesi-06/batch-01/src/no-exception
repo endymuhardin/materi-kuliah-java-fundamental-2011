@@ -1,0 +1,37 @@
+pseudocode : error handling tanpa exception
+
+skenario : query tabel user dari database
+
+type = mysql
+server = 192.168.0.10
+nama = belajar
+user = endy
+pass = test
+tabel = tbl_user
+
+function displayTabelUser(){
+    conn = connectDb(type, server, nama, user, pass)
+    if(conn.status == 12) {
+        print "type db tidak didukung"
+    } else if (conn.status == 13) {
+        print "server database tidak bisa diakses"
+    } else if (conn.status == 14) {
+        print "database belajar tidak ada"
+    } else if (conn.status == 0) { // sukses
+        result = conn.executeQuery("select * from tbl_user")
+        if(result.status == 100) {
+            print "tbl_user tidak ada"
+        } else if(result.status == 200) {
+            print "sintaks SQL salah"
+        } else if(result.status == 0) { // sukses
+            display(result)
+        }
+    }
+}
+
+function coba(){
+
+    displayTabelUser();
+    
+    // kalau sintaks SQL salah, tampilkan pesan error di sini
+}

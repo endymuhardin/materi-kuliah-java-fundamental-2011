@@ -1,0 +1,36 @@
+pseudocode : error handling dengan exception
+
+skenario : query tabel user dari database
+
+type = mysql
+server = 192.168.0.10
+nama = belajar
+user = endy
+pass = test
+tabel = tbl_user
+
+public void displayTabelUser() throws SintaksSQLSalah {
+    try {
+        conn = connectDb(type, server, nama, user, pass)
+        result = conn.executeQuery("select * from tbl_user")
+        display(result)
+    } catch (TipeDbTidakDikenali err) {
+        print "type db tidak didukung"
+    } catch (DbTidakBisaDiakses err) {
+        print "server database tidak bisa diakses"
+    } catch (DbNameTidakAda err) {
+        print "database belajar tidak ada"
+    } catch (TabelTidakAda err) {
+        print "tbl_user tidak ada"
+    }
+}
+
+public void coba(){
+    try {
+        displayTabelUser();
+    } catch (SintaksSQLSalah err){
+        print "sintaks SQL salah"
+    }
+}
+
+

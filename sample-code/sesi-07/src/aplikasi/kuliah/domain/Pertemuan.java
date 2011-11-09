@@ -4,6 +4,10 @@ public class Pertemuan {
     private String tanggal;
     private String ruangan;
     
+    private Kehadiran kehadiran;
+    private Dosen dosen;
+    private Batch batch;
+    
     public Integer jumlahHadir(){
         return 0;
     }

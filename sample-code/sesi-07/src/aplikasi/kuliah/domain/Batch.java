@@ -1,10 +1,22 @@
 package aplikasi.kuliah.domain;
 
+import java.util.List;
+import java.util.ArrayList;
+
 public class Batch {
     private String mulai;
     private String selesai;
     private String tahunAjaran;
     private String status;
+    
+    private MataKuliah mataKuliah;
+    private Dosen dosen;
+    
+    private List<Mahasiswa> daftarMahasiswa = 
+        new ArrayList<Mahasiswa>();
+    
+    private List<Pertemuan> daftarPertemuan = 
+        new ArrayList<Pertemuan>();
     
     public Integer jumlahMahasiswa(){
         return 0;

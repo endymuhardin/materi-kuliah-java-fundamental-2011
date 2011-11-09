@@ -20,4 +20,8 @@ public class Mahasiswa {
     public Double hitungIPK(){
         return 0d;
     }
+    
+    public void setNama(String nama){
+        this.nama = nama;
+    }
 }

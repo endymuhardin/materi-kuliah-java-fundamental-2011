@@ -9,4 +9,8 @@ public class MataKuliah {
     
     private List<Batch> daftarBatch = 
         new ArrayList<Batch>();
+        
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
 }

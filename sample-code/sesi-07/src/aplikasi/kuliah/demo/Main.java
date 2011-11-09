@@ -1,6 +1,7 @@
 package aplikasi.kuliah.demo;
 
 import aplikasi.kuliah.domain.Mahasiswa;
+import aplikasi.kuliah.domain.MataKuliah;
 
 public class Main {
     public static void main(String[] xx) {
@@ -16,6 +17,10 @@ public class Main {
         m4.setNama("Mahasiswa 4");
         m5.setNama("Mahasiswa 5");
         
+        MataKuliah prog1 = new MataKuliah();
+        MataKuliah prog2 = new MataKuliah();
         
+        prog1.setNama("Pemrograman 1");
+        prog2.setNama("Pemrograman 2");
     }
 }

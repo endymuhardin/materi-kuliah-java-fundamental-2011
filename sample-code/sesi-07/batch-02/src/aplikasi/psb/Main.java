@@ -12,5 +12,19 @@ public class Main {
         // 2 soal
         Soal s1 = new Soal();
         Soal s2 = new Soal();
+        
+        // masing-masing pendaftar mengerjakan soal
+        Jawaban p1j1 = new Jawaban();
+        Jawaban p1j2 = new Jawaban();
+        Jawaban p2j1 = new Jawaban();
+        Jawaban p2j2 = new Jawaban();
+        Jawaban p3j1 = new Jawaban();
+        Jawaban p3j2 = new Jawaban();
+        Jawaban p4j1 = new Jawaban();
+        Jawaban p4j2 = new Jawaban();
+        Jawaban p5j1 = new Jawaban();
+        Jawaban p5j2 = new Jawaban();
+        
+        
     }
 }

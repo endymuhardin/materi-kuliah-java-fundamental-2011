@@ -12,11 +12,28 @@ public class HasilTes {
         
     private Integer nilai;
     
+    public List<Jawaban> getDaftarJawaban(){
+        return daftarJawaban;
+    }
+    
     public String hitungPeringkat() {
         return null;
     }
     
-    public Boolean hasil() {
-        return null;
+    /**
+    * menghitung kelulusan pendaftar. 
+    * Lulus bila lebih dari satu jawaban benar
+    * @return true kalau lulus
+    */
+    public Boolean lulus() {
+        Integer jumlahBenar = 0;
+        
+        for(Jawaban j : daftarJawaban){
+            if(j.benar()){
+                jumlahBenar++;
+            }
+        }
+        
+        return jumlahBenar > 1;
     }
 }

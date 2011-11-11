@@ -9,6 +9,8 @@ public class Main {
         Pendaftar p4 = new Pendaftar();
         Pendaftar p5 = new Pendaftar();
         
-        
+        // 2 soal
+        Soal s1 = new Soal();
+        Soal s2 = new Soal();
     }
 }

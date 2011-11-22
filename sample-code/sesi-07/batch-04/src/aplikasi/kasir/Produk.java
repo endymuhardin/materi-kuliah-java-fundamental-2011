@@ -16,7 +16,23 @@ public class Produk {
         this.kode = kode;
     }
     
+    public String getKode(){
+        return this.kode;
+    }
+    
     public void setHarga(BigDecimal harga){
         this.harga = harga;
+    }
+    
+    public Integer hitungJumlahTerjual(){
+        Integer hasil = 0;
+        for(PenjualanDetail d : daftarPenjualanDetail){
+            hasil += d.getQuantity();
+        }
+        return hasil;
+    }
+    
+    public List<PenjualanDetail> getDaftarPenjualanDetail(){
+        return this.daftarPenjualanDetail;
     }
 }

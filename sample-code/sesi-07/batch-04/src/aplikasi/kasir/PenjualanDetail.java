@@ -18,4 +18,8 @@ public class PenjualanDetail {
     public void setQuantity(Integer q){
         this.quantity = q;
     }
+    
+    public Integer getQuantity(){
+        return quantity;
+    }
 }

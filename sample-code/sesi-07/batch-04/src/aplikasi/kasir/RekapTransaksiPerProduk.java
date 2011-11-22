@@ -1,6 +1,8 @@
 package aplikasi.kasir;
 
 import java.math.BigDecimal;
+import java.util.List;
+import java.util.ArrayList;
 
 public class RekapTransaksiPerProduk {
     public static void main(String[] xx){
@@ -23,6 +25,13 @@ public class RekapTransaksiPerProduk {
         p4.setHarga(new BigDecimal(400000.00));
         p5.setHarga(new BigDecimal(500000.00));
         
+        List<Produk> daftarProduk = new ArrayList<Produk>();
+        daftarProduk.add(p1);
+        daftarProduk.add(p2);
+        daftarProduk.add(p3);
+        daftarProduk.add(p4);
+        daftarProduk.add(p5);
+        
         // 2. bikin 2 kasir
         Kasir k1 = new Kasir();
         Kasir k2 = new Kasir();
@@ -39,10 +48,12 @@ public class RekapTransaksiPerProduk {
         PenjualanDetail p1k1d1 = new PenjualanDetail();
         p1k1d1.setProduk(p1);
         p1k1d1.setQuantity(1);
+        p1.getDaftarPenjualanDetail().add(p1k1d1);
         
         PenjualanDetail p1k1d2 = new PenjualanDetail();
         p1k1d2.setProduk(p2);
         p1k1d2.setQuantity(5);
+        p2.getDaftarPenjualanDetail().add(p1k1d2);
         
         p1k1.getDaftarPenjualanDetail().add(p1k1d1);
         p1k1.getDaftarPenjualanDetail().add(p1k1d2);
@@ -52,10 +63,12 @@ public class RekapTransaksiPerProduk {
         PenjualanDetail p2k1d1 = new PenjualanDetail();
         p2k1d1.setProduk(p2);
         p2k1d1.setQuantity(2);
+        p2.getDaftarPenjualanDetail().add(p2k1d1);
         
         PenjualanDetail p2k1d2 = new PenjualanDetail();
         p2k1d2.setProduk(p5);
         p2k1d2.setQuantity(3);
+        p5.getDaftarPenjualanDetail().add(p2k1d2);
         
         p2k1.getDaftarPenjualanDetail().add(p2k1d1);
         p2k1.getDaftarPenjualanDetail().add(p2k1d2);
@@ -65,10 +78,12 @@ public class RekapTransaksiPerProduk {
         PenjualanDetail p1k2d1 = new PenjualanDetail();
         p1k2d1.setProduk(p4);
         p1k2d1.setQuantity(10);
+        p4.getDaftarPenjualanDetail().add(p1k2d1);
         
         PenjualanDetail p1k2d2 = new PenjualanDetail();
         p1k2d2.setProduk(p5);
         p1k2d2.setQuantity(2);
+        p5.getDaftarPenjualanDetail().add(p1k2d2);
         
         p1k2.getDaftarPenjualanDetail().add(p1k2d1);
         p1k2.getDaftarPenjualanDetail().add(p1k2d2);
@@ -77,10 +92,12 @@ public class RekapTransaksiPerProduk {
         PenjualanDetail p2k2d1 = new PenjualanDetail();
         p2k2d1.setProduk(p1);
         p2k2d1.setQuantity(3);
+        p1.getDaftarPenjualanDetail().add(p2k2d1);
         
-        PenjualanDetail p1k2d2 = new PenjualanDetail();
+        PenjualanDetail p2k2d2 = new PenjualanDetail();
         p2k2d2.setProduk(p5);
         p2k2d2.setQuantity(1);
+        p5.getDaftarPenjualanDetail().add(p2k2d2);
         
         p2k2.getDaftarPenjualanDetail().add(p2k2d1);
         p2k2.getDaftarPenjualanDetail().add(p2k2d1);
@@ -89,8 +106,15 @@ public class RekapTransaksiPerProduk {
         PenjualanDetail p3k2d1 = new PenjualanDetail();
         p3k2d1.setProduk(p2);
         p3k2d1.setQuantity(2);
+        p2.getDaftarPenjualanDetail().add(p3k2d1);
         
         p3k2.getDaftarPenjualanDetail().add(p3k2d1);
-                      
+        
+        // 4. rekap penjualan per produk
+        for(Produk x : daftarProduk){
+            System.out.print("Produk "+x.getKode());
+            System.out.println(", penjualan : "
+            + x.hitungJumlahTerjual());
+        }
     }
 }

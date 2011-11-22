@@ -33,7 +33,7 @@ public class RekapTransaksiPerProduk {
         k1.setSaldoAwal(new BigDecimal(1000000.00));
         k2.setSaldoAwal(new BigDecimal(1100000.00));
         
-        // 3. Kasir 1 : 2 penjualan
+        // 3.a. Kasir 1 : 2 penjualan
         Penjualan p1k1 = new Penjualan();
         
         PenjualanDetail p1k1d1 = new PenjualanDetail();
@@ -60,6 +60,37 @@ public class RekapTransaksiPerProduk {
         p2k1.getDaftarPenjualanDetail().add(p2k1d1);
         p2k1.getDaftarPenjualanDetail().add(p2k1d2);
         
+        // 3.b. Kasir 2 : 3 penjualan
+        Penjualan p1k2 = new Penjualan();
+        PenjualanDetail p1k2d1 = new PenjualanDetail();
+        p1k2d1.setProduk(p4);
+        p1k2d1.setQuantity(10);
         
+        PenjualanDetail p1k2d2 = new PenjualanDetail();
+        p1k2d2.setProduk(p5);
+        p1k2d2.setQuantity(2);
+        
+        p1k2.getDaftarPenjualanDetail().add(p1k2d1);
+        p1k2.getDaftarPenjualanDetail().add(p1k2d2);
+        
+        Penjualan p2k2 = new Penjualan();
+        PenjualanDetail p2k2d1 = new PenjualanDetail();
+        p2k2d1.setProduk(p1);
+        p2k2d1.setQuantity(3);
+        
+        PenjualanDetail p1k2d2 = new PenjualanDetail();
+        p2k2d2.setProduk(p5);
+        p2k2d2.setQuantity(1);
+        
+        p2k2.getDaftarPenjualanDetail().add(p2k2d1);
+        p2k2.getDaftarPenjualanDetail().add(p2k2d1);
+        
+        Penjualan p3k2 = new Penjualan();
+        PenjualanDetail p3k2d1 = new PenjualanDetail();
+        p3k2d1.setProduk(p2);
+        p3k2d1.setQuantity(2);
+        
+        p3k2.getDaftarPenjualanDetail().add(p3k2d1);
+                      
     }
 }

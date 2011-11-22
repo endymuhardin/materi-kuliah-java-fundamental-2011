@@ -10,4 +10,12 @@ public class PenjualanDetail {
     public BigDecimal hitungSubtotal(){
         return null;
     }
+    
+    public void setProduk(Produk p){
+        this.produk = p;
+    }
+    
+    public void setQuantity(Integer q){
+        this.quantity = q;
+    }
 }

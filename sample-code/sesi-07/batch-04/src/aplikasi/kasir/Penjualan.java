@@ -21,4 +21,8 @@ public class Penjualan {
     public BigDecimal hitungKembalian(){
         return null;
     }
+    
+    public List<PenjualanDetail> getDaftarPenjualanDetail(){
+        return this.daftarPenjualanDetail;
+    }
 }

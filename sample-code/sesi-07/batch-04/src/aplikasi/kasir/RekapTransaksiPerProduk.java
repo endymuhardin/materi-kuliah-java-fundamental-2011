@@ -32,5 +32,34 @@ public class RekapTransaksiPerProduk {
         
         k1.setSaldoAwal(new BigDecimal(1000000.00));
         k2.setSaldoAwal(new BigDecimal(1100000.00));
+        
+        // 3. Kasir 1 : 2 penjualan
+        Penjualan p1k1 = new Penjualan();
+        
+        PenjualanDetail p1k1d1 = new PenjualanDetail();
+        p1k1d1.setProduk(p1);
+        p1k1d1.setQuantity(1);
+        
+        PenjualanDetail p1k1d2 = new PenjualanDetail();
+        p1k1d2.setProduk(p2);
+        p1k1d2.setQuantity(5);
+        
+        p1k1.getDaftarPenjualanDetail().add(p1k1d1);
+        p1k1.getDaftarPenjualanDetail().add(p1k1d2);
+        
+        Penjualan p2k1 = new Penjualan();
+        
+        PenjualanDetail p2k1d1 = new PenjualanDetail();
+        p2k1d1.setProduk(p2);
+        p2k1d1.setQuantity(2);
+        
+        PenjualanDetail p2k1d2 = new PenjualanDetail();
+        p2k1d2.setProduk(p5);
+        p2k1d2.setQuantity(3);
+        
+        p2k1.getDaftarPenjualanDetail().add(p2k1d1);
+        p2k1.getDaftarPenjualanDetail().add(p2k1d2);
+        
+        
     }
 }

@@ -13,4 +13,12 @@ public class Penjualan {
     private Kasir kasir;
     private List<PenjualanDetail> daftarPenjualanDetail
         = new ArrayList<PenjualanDetail>();
+        
+    public BigDecimal hitungTotal(){
+        return null;
+    }
+    
+    public BigDecimal hitungKembalian(){
+        return null;
+    }
 }

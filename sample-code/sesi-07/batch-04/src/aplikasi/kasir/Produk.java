@@ -11,4 +11,12 @@ public class Produk {
     
     private List<PenjualanDetail> daftarPenjualanDetail
         = new ArrayList<PenjualanDetail>();
+        
+    public void setKode(String kode){
+        this.kode = kode;
+    }
+    
+    public void setHarga(BigDecimal harga){
+        this.harga = harga;
+    }
 }

@@ -14,5 +14,10 @@ public class Main {
 
         // NonTunai n = new NonTunai(); // abstract class, tidak bisa diinstankan
 
+        System.out.println(p.hitungTotal());
+
+        // t mendapatkan implementasi hitungTotal dari superclass
+        System.out.println(t.hitungTotal());
+
     }
 }

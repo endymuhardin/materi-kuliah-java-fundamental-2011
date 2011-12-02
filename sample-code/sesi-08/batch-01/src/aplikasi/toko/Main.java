@@ -9,6 +9,6 @@ public class Main {
         // Tunai adalah subclass, memiliki tipe data superclass
         px = t; // tidak error
 
-        t = p; // error, karena pembayaran memiliki informasi < tunai
+        //t = p; // error, karena pembayaran memiliki informasi < tunai
     }
 }

@@ -31,6 +31,10 @@ public class Main {
 
     public static void tampilkanDiskon(Diskon d){
         Penjualan j = new Penjualan();
+
+        // method mana yang akan dijalankan (total atau produk)
+        // ditentukan pada saat runtime (bukan pada saat compile time)
+        // disebut dengan istilah late-binding / polymorphism
         BigDecimal diskon = d.hitungDiskon(j);
     }
 }

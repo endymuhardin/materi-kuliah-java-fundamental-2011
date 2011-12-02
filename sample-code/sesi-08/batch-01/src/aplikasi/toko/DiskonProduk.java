@@ -7,6 +7,8 @@ import java.util.Arrays;
 
 public class DiskonProduk implements Diskon {
 
+    // override artinya menimpa/mengganti implementasi superclass
+    @Override
     public BigDecimal hitungDiskon(Penjualan p){
         BigDecimal totalDiskon = BigDecimal.ZERO;
 

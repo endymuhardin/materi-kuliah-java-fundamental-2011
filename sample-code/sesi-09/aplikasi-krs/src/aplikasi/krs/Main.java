@@ -78,7 +78,7 @@ public class Main {
         tampilkanRencanaStudi(daftarRencanaStudi);
     }
 
-    public static void tampilkanRencanaStudi(List<RencanaStudi> daftarRencanaStudi){
+    private static void tampilkanRencanaStudi(List<RencanaStudi> daftarRencanaStudi){
         Integer hitung = 1;
         for(RencanaStudi r : daftarRencanaStudi){
             System.out.print(hitung++);

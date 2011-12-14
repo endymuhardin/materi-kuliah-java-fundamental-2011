@@ -82,26 +82,42 @@ public class Main {
         Integer hitung = 1;
         for(RencanaStudi r : daftarRencanaStudi){
             System.out.print(hitung++);
-            System.out.print(". Mahasiswa : ");
-            System.out.print(r.getNpm() + " - " + r.getNama() + " - "+r.getIpk());
-            System.out.println();
+            tampilkanInformasiRencanaStudi(r);
 
             for(RencanaStudiDetail rd : r.getDaftarRencanaStudiDetail()){
-                System.out.print("\t");
-                System.out.print("Mata Kuliah : ");
-                System.out.print(rd.getMatakuliah().getKode() + " - ");
-                System.out.print(rd.getMatakuliah().getNama() + ", ");
-                System.out.print(rd.getMatakuliah().getSks() + " sks");
-                System.out.print(" ["+rd.getStatus()+"]");
+                tampilkanInformasiRencanaStudiDetail(rd);
 
-                if(StatusRencanaStudiDetail.APPROVED.equals(rd.getStatus()) ||
-                StatusRencanaStudiDetail.REJECTED.equals(rd.getStatus())) {
-                    System.out.print(" direview oleh ");
-                    System.out.print(rd.getReviewer().getNama());
+                if(sudahDireview(rd)) {
+                    tampilkanReviewer(rd);
                 }
 
                 System.out.println();
             }
         }
+    }
+
+    private static boolean sudahDireview(RencanaStudiDetail rd){
+        return StatusRencanaStudiDetail.APPROVED.equals(rd.getStatus()) ||
+                StatusRencanaStudiDetail.REJECTED.equals(rd.getStatus());
+    }
+
+    private static void tampilkanReviewer(RencanaStudiDetail rd){
+        System.out.print(" direview oleh ");
+        System.out.print(rd.getReviewer().getNama());
+    }
+
+    private static void tampilkanInformasiRencanaStudi(RencanaStudi r){
+        System.out.print(". Mahasiswa : ");
+        System.out.print(r.getNpm() + " - " + r.getNama() + " - "+r.getIpk());
+        System.out.println();
+    }
+
+    private static void tampilkanInformasiRencanaStudiDetail(RencanaStudiDetail rd){
+        System.out.print("\t");
+        System.out.print("Mata Kuliah : ");
+        System.out.print(rd.getMatakuliah().getKode() + " - ");
+        System.out.print(rd.getMatakuliah().getNama() + ", ");
+        System.out.print(rd.getMatakuliah().getSks() + " sks");
+        System.out.print(" ["+rd.getStatus()+"]");
     }
 }

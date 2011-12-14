@@ -56,6 +56,26 @@ public class Main {
 
         System.out.println("====== Daftar Pengajuan RS ======");
         tampilkanRencanaStudi(daftarRencanaStudi);
+
+        // 3. Approval
+        Dosen d1 = new Dosen();
+        d1.setKode("G");
+        d1.setNama("Greg");
+
+        r1d1.setStatus(StatusRencanaStudiDetail.APPROVED);
+        r1d1.setReviewer(d1);
+
+        r1d2.setStatus(StatusRencanaStudiDetail.APPROVED);
+        r1d2.setReviewer(d1);
+
+        r2d1.setStatus(StatusRencanaStudiDetail.REJECTED);
+        r2d1.setReviewer(d1);
+
+        r2d2.setStatus(StatusRencanaStudiDetail.APPROVED);
+        r2d2.setReviewer(d1);
+
+        System.out.println("====== Hasil Pengajuan RS ======");
+        tampilkanRencanaStudi(daftarRencanaStudi);
     }
 
     public static void tampilkanRencanaStudi(List<RencanaStudi> daftarRencanaStudi){
@@ -73,6 +93,13 @@ public class Main {
                 System.out.print(rd.getMatakuliah().getNama() + ", ");
                 System.out.print(rd.getMatakuliah().getSks() + " sks");
                 System.out.print(" ["+rd.getStatus()+"]");
+
+                if(StatusRencanaStudiDetail.APPROVED.equals(rd.getStatus()) ||
+                StatusRencanaStudiDetail.REJECTED.equals(rd.getStatus())) {
+                    System.out.print(" direview oleh ");
+                    System.out.print(rd.getReviewer().getNama());
+                }
+
                 System.out.println();
             }
         }

@@ -30,4 +30,12 @@ public class RencanaStudiDetail {
     public void setStatus(StatusRencanaStudiDetail s){
         this.status = s;
     }
+
+    public Dosen getReviewer(){
+        return reviewer;
+    }
+
+    public void setReviewer(Dosen s){
+        this.reviewer = s;
+    }
 }

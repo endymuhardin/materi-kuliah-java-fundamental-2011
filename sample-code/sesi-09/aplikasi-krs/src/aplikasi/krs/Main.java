@@ -55,6 +55,10 @@ public class Main {
         daftarRencanaStudi.add(r2);
 
         System.out.println("====== Daftar Pengajuan RS ======");
+        tampilkanRencanaStudi(daftarRencanaStudi);
+    }
+
+    public static void tampilkanRencanaStudi(List<RencanaStudi> daftarRencanaStudi){
         Integer hitung = 1;
         for(RencanaStudi r : daftarRencanaStudi){
             System.out.print(hitung++);

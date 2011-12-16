@@ -9,4 +9,13 @@ public class Peminjaman {
     private Anggota peminjam;
     private List<PeminjamanDetail> daftarPeminjamanDetail
         = new ArrayList<PeminjamanDetail>();
+
+    public void tambahPeminjamanDetail(PeminjamanDetail d){
+        daftarPeminjamanDetail.add(d);
+        d.setPeminjaman(this);
+    }
+
+    public void setPeminjam(Anggota a){
+        peminjam = a;
+    }
 }

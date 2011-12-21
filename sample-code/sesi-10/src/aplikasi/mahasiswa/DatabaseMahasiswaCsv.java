@@ -1,6 +1,6 @@
 package aplikasi.mahasiswa;
 
-public class DatabaseMahasiswaCss implements DatabaseMahasiswa {
+public class DatabaseMahasiswaCsv implements DatabaseMahasiswa {
     public void simpan(Mahasiswa m){
 
     }

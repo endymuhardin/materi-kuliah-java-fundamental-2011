@@ -22,6 +22,10 @@ public class AplikasiMahasiswa {
         // database csv
         DatabaseMahasiswaCsv dbCsv = new DatabaseMahasiswaCsv("mhs.txt", true);
         db.add(dbCsv);
+		
+		// Database Access
+		DatabaseMahasiswaAccess dbAccess = new DatabaseMahasiswaAccess("dbmahasiswa");
+		db.add(dbAccess);
 
         for(DatabaseMahasiswa d : db){
             for(Mahasiswa m : daftarMahasiswa){
